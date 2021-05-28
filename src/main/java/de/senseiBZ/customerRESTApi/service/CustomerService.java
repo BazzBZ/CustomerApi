@@ -3,10 +3,7 @@ package de.senseiBZ.customerRESTApi.service;
 
 import de.senseiBZ.customerRESTApi.entities.Customer;
 import de.senseiBZ.customerRESTApi.repositories.CustomerRepo;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 
