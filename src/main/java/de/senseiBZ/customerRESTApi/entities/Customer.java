@@ -1,16 +1,30 @@
 package de.senseiBZ.customerRESTApi.entities;
 
 
+import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "customer")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotBlank(message = "Firstname should not be blank")
     private String firstName;
+
+    @NotBlank (message = "Lastname should not be blank")
     private String lastName;
+
+    @Email(message = "Email is not valid")
     private String email;
 
     public int getId() {
